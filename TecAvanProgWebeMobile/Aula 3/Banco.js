@@ -43,7 +43,7 @@ const Agendamentos = sequelize.define("agendamentos", {
 // "force: true" força a criação da tabela
 // Agendamentos.sync({ force: true });
 
-// Inserção de dados na tabela
+// // Inserção de dados na tabela
 Agendamentos.create({
   nome: "Matheus Romano",
   email: "teste@gmail.com",
