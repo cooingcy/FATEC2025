@@ -1,5 +1,3 @@
-package com.mycompany.minhaprimeiraed;
-
 public class MinhaPrimeiraED {
 
     // Vetor de objetos que armazena os elementos
