@@ -20,4 +20,4 @@ const Agendamentos = db.sequelize.define('agendamentos', {
 
 // Agendamentos.sync({focus: true})
 
-// module.exports = Agendamentos
+module.exports = Agendamentos
