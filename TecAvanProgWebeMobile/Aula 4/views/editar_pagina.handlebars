@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-primary">
+            <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">SISTEMA WEB</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-1">
+                &nbsp;
+            </div>
+            <div class="col bg-white">
+                &nbsp;
+            </div>
+            <div class="col-1">
+                &nbsp;
+            </div>
+        </div>
+     <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            <p class="text-start fs-5">Editar Dados - Agendamento de Potenciais Clientes</p>
+            <p class="text-start fs-6">Sistema Utilizado para agendamento de serviços.</p>
+            <p>
+                 <form action="/editar/{{agendamento.id}}" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" value="{{agendamento.nome}}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" name="telefone" value="{{agendamento.telefone}}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Origem:</label>
+                        <select name="origem" class="form-select" aria-label="Default select example">
+                            <option value="celular" {{#if (eq agendamento.origem "celular")}}selected{{/if}}>Celular</option>
+                            <option value="whatsapp" {{#if (eq agendamento.origem "whatsapp")}}selected{{/if}}>Whatsapp</option>
+                            <option value="telefone_fixo" {{#if (eq agendamento.origem "telefone_fixo")}}selected{{/if}}>Telefone Fixo</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="data_contato" class="form-label">Data do Contato</label>
+                        <input type="date" class="form-control" id="data_contato" name="data_contato" value="{{agendamento.data_contato}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="observacao" class="form-label">Observação</label>
+                        <textarea class="form-control" id="observacao" name="observacao">{{agendamento.observacao}}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    <a href="/consulta" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+   
+</div>
