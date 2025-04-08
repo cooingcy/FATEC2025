@@ -1,5 +1,7 @@
+// Cria uma const para o banco de dados
 const db = require('./Banco')
 
+// Define o modelo Agendamentos com os campos e tipos de dados
 const Agendamentos = db.sequelize.define('agendamentos', {
     nome:{
         type: db.Sequelize.STRING
@@ -18,6 +20,8 @@ const Agendamentos = db.sequelize.define('agendamentos', {
     }
 })
 
+// Sincroniza o modelo com o banco de dados, criando a tabela se não existir
 // Agendamentos.sync({focus: true})
 
+// Exporta o modelo Agendamentos
 module.exports = Agendamentos
